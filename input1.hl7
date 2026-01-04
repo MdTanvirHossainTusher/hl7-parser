@@ -5,7 +5,6 @@ PV1|1|O|Cardiology Unit^Room 105||||D12345^Johnson^
 
 MSH|^~\&|MEDITECH|CLINIC|||202505101000||SIU^S12|MSG12347|P|2.3|
 
-
 MSH|^~\&|CERNER|MEDICAL_CENTER|||202505121545||SIU^S12|MSG12348|P|2.3|
 SCH|456789||||||Orthopedic Surgery Consultation|||90|m|^^90^20250525154500|||||||||D45678^Martinez^Carlos|||||PENDING
 PID|1||P45678||Davis^Jennifer^Lynn||19780622|F|||321 Elm Rd^^Austin^TX^78701
