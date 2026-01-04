@@ -1,0 +1,64 @@
+[
+  {
+    "appointment_id": "234567",
+    "appointment_datetime": "2025-05-15T14:30:00Z",
+    "patient": {
+      "id": "P23456",
+      "first_name": "Sarah",
+      "last_name": "Smith",
+      "dob": "1992-03-15",
+      "gender": "F"
+    },
+    "provider": {
+      "id": "D12345",
+      "name": "Dr. Johnson "
+    },
+    "location": "Cardiology Unit Room 105",
+    "reason": "Cardiology Follow-up"
+  },
+  {
+    "appointment_id": "456789",
+    "appointment_datetime": "2025-05-25T15:45:00Z",
+    "patient": {
+      "id": "P45678",
+      "first_name": "Jennifer",
+      "last_name": "Davis",
+      "dob": "1978-06-22",
+      "gender": "F"
+    },
+    "provider": {
+      "id": "D45678",
+      "name": "Dr. Martinez Carlos"
+    },
+    "location": "Orthopedics Room 301",
+    "reason": "Orthopedic Surgery Consultation"
+  },
+  {
+    "appointment_id": "567890",
+    "appointment_datetime": "2025-05-18T11:00:00Z",
+    "patient": null,
+    "provider": {
+      "id": "D23456",
+      "name": "Dr. Lee Susan"
+    },
+    "location": "Dental Suite Chair 3",
+    "reason": "Routine Dental Cleaning"
+  },
+  {
+    "appointment_id": "678901",
+    "appointment_datetime": "2025-05-28T16:30:00Z",
+    "patient": {
+      "id": "P67890",
+      "first_name": "Robert",
+      "last_name": "Anderson",
+      "dob": "1965-04-25",
+      "gender": "M"
+    },
+    "provider": {
+      "id": "D34567",
+      "name": "Dr. Thompson David"
+    },
+    "location": "Behavioral Health Room 410",
+    "reason": "Annual Skin Cancer Screening"
+  }
+]
