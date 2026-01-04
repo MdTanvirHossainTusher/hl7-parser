@@ -197,7 +197,7 @@ class HL7Parser:
         if not sch:
             return None
         
-        timestamp_field = sch.get_field(11)
+        timestamp_field = sch.get_field(12)
         if not timestamp_field:
             return None
         
