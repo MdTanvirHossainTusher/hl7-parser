@@ -1,0 +1,24 @@
+MSH|^~\&|EPIC|HOSPITAL|||202505051430||SIU^S12|MSG12346|P|2.3|
+SCH|234567||||||Cardiology Follow-up|||45|m|^^45^20250515143000|||||||||D12345^Johnson^Emily|||||BOOKED
+PID|1||P23456||Smith^Sarah^Anne||19920315|F|||456 Oak Ave^^Boston^MA^02101
+PV1|1|O|Cardiology Unit^Room 105||||D12345^Johnson^
+
+MSH|^~\&|MEDITECH|CLINIC|||202505101000||SIU^S12|MSG12347|P|2.3|
+
+
+MSH|^~\&|CERNER|MEDICAL_CENTER|||202505121545||SIU^S12|MSG12348|P|2.3|
+SCH|456789||||||Orthopedic Surgery Consultation|||90|m|^^90^20250525154500|||||||||D45678^Martinez^Carlos|||||PENDING
+PID|1||P45678||Davis^Jennifer^Lynn||19780622|F|||321 Elm Rd^^Austin^TX^78701
+PV1|1|O|Orthopedics^Room 301||||D45678^Martinez^Carlos
+PV1|1|O|Orthopedics^Room 301||||D45678^Martinez^Carlos
+PV1|1|O|Orthopedics^Room 301||||D45678^Martinez^Carlos
+
+MSH|^~\&|DENTRIX|DENTAL_CLINIC|||202505081100||SIU^S12|MSG12349|P|2.3|
+SCH|567890||||||Routine Dental Cleaning|||60|m|^^60^20250518110000|||||||||D23456^Lee^Susan|||||BOOKED
+PV1|1|O|Dental Suite^Chair 3||||D23456^Lee^Susan
+
+MSH|^~\&|ALLSCRIPTS|DERMATOLOGY|||202505141630||SIU^S12|MSG12350|P|2.3|
+SCH|678901||||||Annual Skin Cancer Screening|||30|m|^^30^20250528163000|||||||||D89012^Patel^Anjali|||||WAITLISTED
+PID|1||P67890||Anderson^Robert^Lee||19650425|M|||987 Cedar Ln^^Miami^FL^33101
+XYZ|1|O|Dermatology^Exam Room 2||||D89012^Patel^Anjali
+PV1|1|O|Behavioral Health^Room 410||||D34567^Thompson^David

@@ -1,0 +1,1 @@
+[{"appointment_id": "123456", "appointment_datetime": "2025-05-02T13:00:00Z", "patient": {"id": "P12345", "first_name": "John", "last_name": "Doe", "dob": "1985-02-10", "gender": "M"}, "provider": {"id": "D67890", "name": "Dr. Smith John"}, "location": "Clinic A Room 203", "reason": "General Consultation"}]
