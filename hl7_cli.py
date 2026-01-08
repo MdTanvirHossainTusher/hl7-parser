@@ -115,6 +115,9 @@ Examples:
   
   Send to Kafka:
     python hl7_cli.py kafka-produce input.hl7 --bootstrap localhost:9092 --topic hl7-raw
+    
+  Send to Kafka as dir:
+    python hl7_cli.py kafka-produce-dir ./hl7_files/ --bootstrap localhost:9092 --topic hl7-raw
   
   Start Kafka consumer:
     python hl7_cli.py kafka-consume --bootstrap localhost:9092 --input-topic hl7-raw --output-topic appointments
@@ -136,7 +139,14 @@ Examples:
     kafka_produce_parser.add_argument('files', nargs='+', help='HL7 files to send')
     kafka_produce_parser.add_argument('--bootstrap', required=True, help='Kafka bootstrap servers')
     kafka_produce_parser.add_argument('--topic', required=True, help='Kafka topic')
-    
+
+    kafka_produce_dir_parser = subparsers.add_parser('kafka-produce-dir',
+                                                     help='Send all HL7 files from a directory to Kafka')
+    kafka_produce_dir_parser.add_argument('directory', help='Directory containing HL7 files')
+    kafka_produce_dir_parser.add_argument('-p', '--pattern', default='*.hl7', help='File pattern (default: *.hl7)')
+    kafka_produce_dir_parser.add_argument('--bootstrap', required=True, help='Kafka bootstrap servers')
+    kafka_produce_dir_parser.add_argument('--topic', required=True, help='Kafka topic')
+
     kafka_consume_parser = subparsers.add_parser('kafka-consume', help='Consume and parse HL7 from Kafka')
     kafka_consume_parser.add_argument('--bootstrap', required=True, help='Kafka bootstrap servers')
     kafka_consume_parser.add_argument('--input-topic', required=True, help='Input Kafka topic')
@@ -165,6 +175,23 @@ Examples:
         producer.send_files(args.files)
         producer.close()
         logger.info("Files sent to Kafka successfully")
+
+    elif args.command == 'kafka-produce-dir':
+        dir_path = Path(args.directory)
+        if not dir_path.exists():
+            logger.error(f"Directory not found: {args.directory}")
+            sys.exit(1)
+
+        files = [str(f) for f in dir_path.glob(args.pattern)]
+
+        if not files:
+            logger.warning(f"No files matching pattern '{args.pattern}' found")
+            sys.exit(0)
+
+        producer = HL7FileProducer(args.bootstrap, args.topic)
+        producer.send_files(files)
+        producer.close()
+        logger.info(f"Sent {len(files)} files to Kafka successfully")
     
     elif args.command == 'kafka-consume':
         consumer = HL7KafkaConsumer(
