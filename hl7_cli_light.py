@@ -5,11 +5,11 @@ from pathlib import Path
 from hl7_parser import HL7Parser
 
 """
-CLI commands to parse appoinment JSON:
+CLI commands to parse appointment JSON:
 
-    python hl7_cli.py input.hl7
-    python hl7_cli.py input.hl7 -o output.json
-    python hl7_cli.py input.hl7 --pretty
+    python hl7_cli_light.py input.hl7
+    python hl7_cli_light.py input.hl7 -o output.json
+    python hl7_cli_light.py input.hl7 --pretty
 
 """
 
